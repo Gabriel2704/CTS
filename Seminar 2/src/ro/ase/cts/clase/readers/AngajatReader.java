@@ -1,17 +1,23 @@
 package ro.ase.cts.clase.readers;
 
-import ro.ase.cts.clase.Angajat;
-import ro.ase.cts.clase.Aplicant;
-
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class AngajatReader {
-    public static List<Aplicant> readAngajati(String file) throws FileNotFoundException {
-        Scanner input2 = new Scanner(new File(file));
+import ro.ase.cts.clase.Angajat;
+import ro.ase.cts.clase.Aplicant;
+
+public class AngajatReader extends AplicantReader {
+
+    public AngajatReader(String fileName) {
+        super(fileName);
+        // TODO Auto-generated constructor stub
+    }
+
+    public List<Aplicant> readAplicanti() throws FileNotFoundException {
+        Scanner input2 = new Scanner(new File(super.fileName));
         input2.useDelimiter(",");
         List<Aplicant> angajati = new ArrayList<Aplicant>();
 
