@@ -8,23 +8,32 @@ public class Student extends Aplicant {
 	private static int sumaFinantare = 20;
 	
 	
+	public static int getSumaFinantare() {
+		return sumaFinantare;
+	}
+
+	public static void setSumaFinantare(int sumaFinantare) {
+		Student.sumaFinantare = sumaFinantare;
+	}
+
 	public String getFacultate() {
 		return facultate;
 	}
+	
 	public void setFacultate(String facultate) {
 		this.facultate = facultate;
 	}
+	
 	public int getAn_studii() {
 		return an_studii;
 	}
+	
 	public void setAn_studii(int an_studii) {
 		this.an_studii = an_studii;
 	}
 
-
 	public Student() {
-		super();
-		
+		super();	
 	}
 	
 	public Student(String nume, String prenume, int varsta, int punctaj, int nr_proiecte, String[] denumireProiect, String facultate, int an_studii) {
@@ -35,7 +44,11 @@ public class Student extends Aplicant {
 	
 	@Override
 	public String toString() {
-		return "Student: Nume=" + nume + ", Prenume=" + prenume + ", Varsta=" + varsta + ", Punctaj=" + punctaj + ", Nr_proiecte=" + nr_proiecte +  ", DenumireProiect=" + Arrays.toString(denumireProiect) + "Facultate=" + facultate + ", An_studii=" + an_studii ;
+		StringBuilder builder = new StringBuilder();
+		builder.append(super.toString());
+		builder.append(" Facultate=" + facultate);
+		builder.append(", An_studii=" + an_studii);
+		return builder.toString();
 	}
 	
 	@Override
