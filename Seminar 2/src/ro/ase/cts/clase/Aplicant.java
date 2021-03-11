@@ -67,5 +67,7 @@ public abstract class Aplicant{
 		return denumireProiect;
 	}
 	
+	public abstract int getFinantare();
+	
 
 }
