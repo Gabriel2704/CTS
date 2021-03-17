@@ -13,21 +13,27 @@ public abstract class Aplicant{
 	public String getNume() {
 		return nume;
 	}
+	
 	public void setNume(String nume) {
 		this.nume = nume;
 	}
+	
 	public String getPrenume() {
 		return prenume;
 	}
+	
 	public void setPrenume(String prenume) {
 		this.prenume = prenume;
 	}
+	
 	public int getVarsta() {
 		return varsta;
 	}
+	
 	public void setVarsta(int varsta) {
 		this.varsta = varsta;
 	}
+	
 	public void afisareStatutPeProiect(Proiect proiect){
 		StringBuilder mesajAfisat = new StringBuilder("Aplicantul "); 
 		mesajAfisat.append(nume);
@@ -38,9 +44,11 @@ public abstract class Aplicant{
 		
 		System.out.println(mesajAfisat.toString());
 	}
+	
 	public int getPunctaj() {
 		return punctaj;
 	}
+	
 	public void setPunctaj(int punctaj) {
 		this.punctaj = punctaj;
 	}
@@ -91,6 +99,5 @@ public abstract class Aplicant{
 		builder.append(Arrays.toString(denumireProiect));
 		return builder.toString();
 	}
-	
 	
 }
