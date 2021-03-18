@@ -2,6 +2,7 @@ package ro.ase.cts.program;
 
 import ro.ase.cts.clase.BrokerTranzactie;
 import ro.ase.cts.clase.BrokerTranzactieLazy;
+import ro.ase.cts.clase.Pagan;
 
 public class Main {
 	public static void main(String[] args) {
@@ -22,5 +23,10 @@ public class Main {
 		
 		System.out.println(lazy1.toString());
 		System.out.println(lazy2.toString());
+		
+		Pagan pagan1 = Pagan.getInstance("Gabi", 22, 1.87);
+		Pagan pagan2 = Pagan.getInstance("Robert", 22, 1.82);
+		System.out.println(pagan1.toString());
+		System.out.println(pagan2.toString());
 	}
 }
