@@ -7,7 +7,7 @@ import ro.ase.cts.observer.clase.Observer;
 public class Main {
 
 	public static void main(String[] args) {
-		ManagerSala manager = new ManagerSala("Sala 3");
+		ManagerSala manager = new ManagerSala();
 		
 		Observer client1 = new Client("Gabi");
 		Observer client2 = new Client("Victor");

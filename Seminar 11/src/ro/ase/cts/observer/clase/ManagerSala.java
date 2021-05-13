@@ -6,12 +6,10 @@ import java.util.List;
 public class ManagerSala implements Subiect {
 
 	private List<Observer> clienti;
-	private final String numeSala;
 
-	public ManagerSala(String numeSala) {
+	public ManagerSala() {
 		super();
 		this.clienti = new ArrayList<>();
-		this.numeSala = numeSala;
 	}
 
 	@Override
