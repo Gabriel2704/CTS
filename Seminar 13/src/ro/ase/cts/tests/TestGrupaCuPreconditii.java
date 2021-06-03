@@ -1,10 +1,10 @@
 package ro.ase.cts.tests;
 
-import static org.junit.Assert.*;
-
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.experimental.categories.Category;
 
+import ro.ase.cts.categorii.GetPromovabilitateCategorie;
 import ro.ase.cts.clase.Grupa;
 import ro.ase.cts.clase.Student;
 
@@ -25,6 +25,7 @@ public class TestGrupaCuPreconditii {
 	}
 	
 	@Test(timeout = 500)
+	@Category(GetPromovabilitateCategorie.class)
 	public void testPromovabilitatePerformanta() {
 		grupa.getPromovabilitate();
 	}

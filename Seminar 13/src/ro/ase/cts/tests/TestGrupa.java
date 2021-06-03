@@ -3,7 +3,11 @@ package ro.ase.cts.tests;
 import static org.junit.Assert.*;
 
 import org.junit.Test;
+import org.junit.experimental.categories.Category;
 
+import ro.ase.cts.categorii.GetPromovabilitateCategorie;
+import ro.ase.cts.categorii.TesteNormaleCategorie;
+import ro.ase.cts.categorii.TesteUrgenteCategorie;
 import ro.ase.cts.clase.Grupa;
 import ro.ase.cts.clase.Student;
 
@@ -49,6 +53,7 @@ public class TestGrupa {
 	}
 
 	@Test
+	@Category({GetPromovabilitateCategorie.class,TesteNormaleCategorie.class})
 	public void testPromovabilitateCorect() {
 		Grupa grupa = new Grupa(1083);
 
@@ -70,6 +75,7 @@ public class TestGrupa {
 	}
 
 	@Test
+	@Category({GetPromovabilitateCategorie.class,TesteUrgenteCategorie.class})
 	public void testPromovabilitateLimitaInferioara() {
 		Grupa grupa = new Grupa(1100);
 
@@ -85,6 +91,7 @@ public class TestGrupa {
 	}
 
 	@Test
+	@Category(GetPromovabilitateCategorie.class)
 	public void testPromovabilitateLimitaSuperioara() {
 		Grupa grupa = new Grupa(1100);
 
